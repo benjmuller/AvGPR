@@ -1,0 +1,25 @@
+Package: AvGPR
+Title: Creates a weighted average Gaussian Process regression model over 5 
+  implementations from packages in both R and Python.
+Version: 1.1.0
+Authors@R: 
+    person("Ben", "Muller", , "ben.muller@btinternet.com", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: A package that calculates a Gaussian process regression model that 
+  is the  weighted average of multiple implementations from R and Python. 
+  You provide it the design, response, and test data, then it will calculate the
+  weighted mean and variances from a collection of Gaussian Process packages.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.0
+URL: https://github.com/benjmuller/AvGPR
+BugReports: https://github.com/benjmuller/AvGPR/issues
+Imports:
+  DiceKriging,
+  laGP,
+  GauPro,
+  reticulate
+Depends: 
+    R (>= 2.10)
+LazyData: true
