@@ -176,7 +176,7 @@ AvGPR <- function(design, response, test, nWeight = 3) {
     pred_Dice_W <- predict(gp_Dice_W, test_W, type = "SK")
 
     ## laGP ##
-    pred_laGP_W <- laGP::aGP(design_W, response_vec_W, test_W, g = NULL,
+    pred_laGP_W <- laGP::aGP(design_W, response_vec_W, test_W,
                      end = min(50, nrow(design_W) - 1), verb = 0)
 
     ## GauPro ##
