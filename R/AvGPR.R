@@ -126,7 +126,7 @@ AvGPR <- function(design, response, test, nWeight = 3) {
   cat("Predicted: 1 / 5...\n")
 
   ## lagp ##
-  pred_laGP <- laGP::aGP(design, response_vec, test, g = NULL,
+  pred_laGP <- laGP::aGP(design, response_vec, test,
                    end = min(50, nrow(design) - 1), verb = 0)
   cat("Predicted: 2 / 5...\n")
 
