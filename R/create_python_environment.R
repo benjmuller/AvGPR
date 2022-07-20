@@ -7,7 +7,6 @@ create_python_environment <- function() {
   reticulate::py_install("numpy", pip=TRUE)
   reticulate::py_install("GPy", pip=TRUE)
   reticulate::py_install("sklearn", pip=TRUE)
-  reticulate::py_install("warnings", pip=TRUE)
 
   reticulate::use_condaenv(env)
 }
