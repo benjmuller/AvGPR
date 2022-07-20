@@ -42,9 +42,9 @@ This is a basic example of a simple GPR using the AvGPR function:
 ``` r
 library(AvGPR)
 # create_python_environment()
-n <- 10
+n <- 15
 X <- seq(0, 4 * pi, length.out = n)
 Y <- 2 * sin(X)
-XX <- seq(1,10, length.out=15)
+XX <- seq(0, 4 * pi, length.out=100)
 AvGPR(data.frame(X=X), data.frame(Y=Y), data.frame(X=XX))
 ```
