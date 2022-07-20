@@ -54,6 +54,13 @@ AvGPR <- function(design, response, test, nWeight = 3) {
         call. = FALSE)
   }
 
+  ## testing at least 9 training data
+
+  if(nrow(design) < 9) {
+    stop(paste("You must have at least 9 data points in the design. There are ", nrow(design),  sep=""),
+         call. = FALSE)
+  }
+
   ## testing nWeight is intger
 
   if(!is.numeric(nWeight)) {
