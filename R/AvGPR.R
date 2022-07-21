@@ -167,7 +167,7 @@ AvGPR <- function(design, response, test, nWeight = 3) {
   for (i in 1:nWeight) {
     n_design <- nrow(design)
     sample_size <- ceiling(n_design / 15)
-    sample_points <- sample.int(n_design, sample_size, replace = TRUE)
+    sample_points <- sample.int(n_design, sample_size)
 
     design_W <- design[-sample_points, , drop=FALSE]
     response_W <- response[-sample_points, , drop=FALSE]
