@@ -96,7 +96,7 @@ normal:
 <center>
 
 <figure>
-<img src="fig1.jpeg" style="width:40.0%"
+<img src="tools/fig1.jpeg" style="width:40.0%"
 alt="A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1." />
 <figcaption aria-hidden="true">A contour plot of a bivariate normal with
 marginal means 0, marginal variances 2 and covariances 1.</figcaption>
@@ -115,7 +115,7 @@ distribution
 
 <center>
 
-<img src="fig2.jpeg" style="width:50.0%" />
+<img src="tools/fig2.jpeg" style="width:50.0%" />
 
 </center>
 
@@ -130,7 +130,7 @@ covariance function (SE):
 
 <center>
 
-<img src="fig3.jpeg" style="width:50.0%;height:20.0%" />
+<img src="tools/fig3.jpeg" style="width:50.0%;height:20.0%" />
 
 </center>
 
@@ -145,7 +145,7 @@ and plot samples of possible values:
 <center>
 
 <figure>
-<img src="fig4.jpeg" style="width:50.0%"
+<img src="tools/fig4.jpeg" style="width:50.0%"
 alt="LHS: Random samples. RHS: Random samples overlaid onto one set of axes." />
 <figcaption aria-hidden="true">LHS: Random samples. RHS: Random samples
 overlaid onto one set of axes.</figcaption>
@@ -166,7 +166,7 @@ Gaussian Process regression.
 
 <center>
 
-<img src="fig5.jpeg" style="width:40.0%" />
+<img src="tools/fig5.jpeg" style="width:40.0%" />
 
 </center>
 
@@ -249,7 +249,7 @@ reliably interpolate the behaviors.
 
 <center>
 
-<img src="fig6.jpeg" style="width:40.0%;height:20.0%" />
+<img src="tools/fig6.jpeg" style="width:40.0%;height:20.0%" />
 
 </center>
 
@@ -304,7 +304,7 @@ the domain:
 
 <center>
 
-<img src="fig7.jpeg" style="width:40.0%" />
+<img src="tools/fig7.jpeg" style="width:40.0%" />
 
 </center>
 
@@ -335,7 +335,7 @@ the covariance gradient:
 
 <center>
 
-<img src="fig8.jpeg" style="width:40.0%" />
+<img src="tools/fig8.jpeg" style="width:40.0%" />
 
 </center>
 
@@ -363,7 +363,7 @@ plotgp_2D(x1, x2, x.train, y.train, sigma = 1, l = 2)
 
 <center>
 
-<img src="fig9.png" style="width:40.0%" />
+<img src="tools/fig9.png" style="width:40.0%" />
 
 </center>
 
@@ -476,7 +476,7 @@ Here is an example plot from an AvGPR regression:
 
 <center>
 
-<img src="fig10.jpeg" style="width:40.0%" />
+<img src="tools/fig10.jpeg" style="width:40.0%" />
 
 </center>
 

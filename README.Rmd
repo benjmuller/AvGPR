@@ -91,7 +91,7 @@ A way to understand Gaussian processes, in particular, getting the parametric fr
 
 <center>
 
-![A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1.](fig1.jpeg){width="40%"}
+![A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1.](tools/fig1.jpeg){width="40%"}
 
 </center>
 
@@ -101,7 +101,7 @@ The normal distributions that construct the bivariate normal have covariance 1, 
 
 <center>
 
-![](fig2.jpeg){width="50%" }
+![](tools/fig2.jpeg){width="50%" }
 
 </center>
 
@@ -111,7 +111,7 @@ Consider expanding this notion to a 10-variate normal distribution where we fix 
 
 <center>
 
-![](fig3.jpeg){width="50%" height="20%"}
+![](tools/fig3.jpeg){width="50%" height="20%"}
 
 </center>
 
@@ -121,7 +121,7 @@ Now suppose we condition the observations $Y_0=0$, $Y_6=0.3$ and $Y_9=-0.4$ and 
 
 <center>
 
-![LHS: Random samples. RHS: Random samples overlaid onto one set of axes.](fig4.jpeg){width="50%"}
+![LHS: Random samples. RHS: Random samples overlaid onto one set of axes.](tools/fig4.jpeg){width="50%"}
 
 </center>
 
@@ -131,7 +131,7 @@ The families of curves that join the points are subsets to the family of solutio
 
 <center>
 
-![](fig5.jpeg){width="40%"}
+![](tools/fig5.jpeg){width="40%"}
 
 </center>
 
@@ -197,7 +197,7 @@ Here we will plot a coloured gradient to give a visual representation of the cor
 
 <center>
 
-![](fig6.jpeg){width="40%" height="20%"}
+![](tools/fig6.jpeg){width="40%" height="20%"}
 
 </center>
 
@@ -238,7 +238,7 @@ Using the predictive distribution, we can plot the Gaussian process by choosing 
 
 <center>
 
-![](fig7.jpeg){width="40%"}
+![](tools/fig7.jpeg){width="40%"}
 
 </center>
 
@@ -257,7 +257,7 @@ Since the covariance matrix has dimensions 40x40, it is difficult to understand 
 
 <center>
 
-![](fig8.jpeg){width="40%"}
+![](tools/fig8.jpeg){width="40%"}
 
 </center>
 
@@ -283,7 +283,7 @@ plotgp_2D(x1, x2, x.train, y.train, sigma = 1, l = 2)
 
 <center>
 
-![](fig9.png){width="40%"}
+![](tools/fig9.png){width="40%"}
 
 </center>
 
@@ -362,7 +362,7 @@ Here is an example plot from an AvGPR regression:
 
 <center>
 
-![](fig10.jpeg){width="40%"}
+![](tools/fig10.jpeg){width="40%"}
 
 </center>
 
