@@ -313,7 +313,8 @@ Using this we can plot the GP:
 
 ``` r
 library(rgl)
-plotgp_2D <- function(x1, x2, x.train, y.train, sigma = 1, l = 1, xlimit = c(), ylimit = c(), zlimit = c()) {
+plotgp_2D <- function(x1, x2, x.train, y.train, sigma = 1, l = 1,
+                        xlimit = c(), ylimit = c(), zlimit = c()) {
   xvals <- expand.grid(x1, x2)
   mu <- posterior(xvals, x.train, y.train, sigma = sigma, l = l)[[1]]
   
