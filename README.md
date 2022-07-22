@@ -424,8 +424,6 @@ Here is an example plot from an AvGPR regression:
 <img src="tools/fig10.jpeg" width=300/>
 </p>
 
-<https://github.com/benjmuller/AvGPR>
-
 <p align="left">
 <img src="tools/SheffieldLogo.jpg" width=200/>
 </p>
