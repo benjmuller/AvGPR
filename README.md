@@ -69,7 +69,11 @@ used as a non-linear multivariate interpolation tool. This process is
 called Gaussian Process regression or Kriging. Using this method, we can
 write multi-output prediction problems in the following parametric form:
 
+<center>
+
 ![\\hat{y}(x)=m(x)+Z(x),](https://latex.codecogs.com/svg.image?%5Chat%7By%7D%28x%29%3Dm%28x%29%2BZ%28x%29%2C "\hat{y}(x)=m(x)+Z(x),")
+
+</center>
 
 where
 ![\\hat{y}](https://latex.codecogs.com/svg.image?%5Chat%7By%7D "\hat{y}")
@@ -89,7 +93,16 @@ A way to understand Gaussian processes, in particular, getting the
 parametric from the non-parametric form, is by considering a bivariate
 normal:
 
-<img src="man/figures/README-unnamed-chunk-2-1.png" title="A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1." alt="A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1." width="45%" style="display: block; margin: auto;" />
+<center>
+
+<figure>
+<img src="fig1.jpeg" style="width:40.0%"
+alt="A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1." />
+<figcaption aria-hidden="true">A contour plot of a bivariate normal with
+marginal means 0, marginal variances 2 and covariances 1.</figcaption>
+</figure>
+
+</center>
 
 <br> The normal distributions that construct the bivariate normal have
 covariance 1, hence the conditioning of an observation (data point)
@@ -100,7 +113,12 @@ plotting some random samples of possible values for the conditional
 distribution
 ![Y_1\|Y_0=0](https://latex.codecogs.com/svg.image?Y_1%7CY_0%3D0 "Y_1|Y_0=0"):
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" width="80%" style="display: block; margin: auto;" />
+<center>
+
+<img src="fig2.jpeg" style="width:50.0%" />
+
+</center>
+
 <br>
 
 Consider expanding this notion to a 10-variate normal distribution where
@@ -110,7 +128,12 @@ with
 with correlations that are specified by the squared exponential
 covariance function (SE):
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" width="50%" style="display: block; margin: auto;" />
+<center>
+
+<img src="fig3.jpeg" style="width:50.0%;height:20.0%" />
+
+</center>
+
 <br>
 
 Now suppose we condition the observations
@@ -119,7 +142,17 @@ Now suppose we condition the observations
 ![Y_9=-0.4](https://latex.codecogs.com/svg.image?Y_9%3D-0.4 "Y_9=-0.4")
 and plot samples of possible values:
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" title="LHS: Random samples. RHS: Random samples overlayed onto one set of axes." alt="LHS: Random samples. RHS: Random samples overlayed onto one set of axes." width="80%" style="display: block; margin: auto;" />
+<center>
+
+<figure>
+<img src="fig4.jpeg" style="width:50.0%"
+alt="LHS: Random samples. RHS: Random samples overlaid onto one set of axes." />
+<figcaption aria-hidden="true">LHS: Random samples. RHS: Random samples
+overlaid onto one set of axes.</figcaption>
+</figure>
+
+</center>
+
 <br>
 
 The families of curves that join the points are subsets to the family of
@@ -131,7 +164,11 @@ function to be parametric functions that define the covariance in the
 discrete multivariate case. This gives us the construction of the
 Gaussian Process regression.
 
-<img src="man/figures/README-unnamed-chunk-6-1.png" width="50%" style="display: block; margin: auto;" />
+<center>
+
+<img src="fig5.jpeg" style="width:40.0%" />
+
+</center>
 
 ## 1-Dimensional Example
 
@@ -141,16 +178,24 @@ on the sine function in the domain
 ![\[-2 \\pi, 2 \\pi\]](https://latex.codecogs.com/svg.image?%5B-2%20%5Cpi%2C%202%20%5Cpi%5D "[-2 \pi, 2 \pi]").
 The randomly generated values that will be used in this example are:
 
+<center>
+
 ![
 -4.572  \\quad -1.788 \\quad-0.761 \\quad 0.095 \\quad 1.727 \\quad 3.585 \\quad 4.181 \\quad 5.454
 ](https://latex.codecogs.com/svg.image?%0A-4.572%20%20%5Cquad%20-1.788%20%5Cquad-0.761%20%5Cquad%200.095%20%5Cquad%201.727%20%5Cquad%203.585%20%5Cquad%204.181%20%5Cquad%205.454%0A "
 -4.572  \quad -1.788 \quad-0.761 \quad 0.095 \quad 1.727 \quad 3.585 \quad 4.181 \quad 5.454
 ")
 
+</center>
+
 The covariance function that this example will be using is the squared
 exponential function (SE). This has the form
 
+<center>
+
 ![k(x_i, x_j)=\\sigma ^2 \\exp \\left(\\frac{-1}{2l^2}\\sum^d\_{k=1}(x\_{i,k}-x\_{j,k})^2 \\right)](https://latex.codecogs.com/svg.image?k%28x_i%2C%20x_j%29%3D%5Csigma%20%5E2%20%5Cexp%20%5Cleft%28%5Cfrac%7B-1%7D%7B2l%5E2%7D%5Csum%5Ed_%7Bk%3D1%7D%28x_%7Bi%2Ck%7D-x_%7Bj%2Ck%7D%29%5E2%20%5Cright%29 "k(x_i, x_j)=\sigma ^2 \exp \left(\frac{-1}{2l^2}\sum^d_{k=1}(x_{i,k}-x_{j,k})^2 \right)")
+
+</center>
 
 <br>
 
@@ -202,12 +247,18 @@ the correlations between each of the random variables. This is
 beneficial when the matrix is large, as there are too many values to
 reliably interpolate the behaviors.
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="50%" style="display: block; margin: auto;" />
+<center>
+
+<img src="fig6.jpeg" style="width:40.0%;height:20.0%" />
+
+</center>
 
 Using the covariance function to construct covariance matrices from
 combinations of the observed data and data we want to predict, we can
 calculate the posterior distribution. The posterior mean vector and
 covariance matrix are given (respectively) by:
+
+<center>
 
 ![
 \\mu\_\* = K^T\_\*K^{-1}y \\\\
@@ -216,6 +267,8 @@ covariance matrix are given (respectively) by:
 \mu_* = K^T_*K^{-1}y \\
 \Sigma_* = K_{**} - K^T_*K^{-1}K_*
 ")
+
+</center>
 
 where ![y](https://latex.codecogs.com/svg.image?y "y") are the outputs
 from the observed data, ![K](https://latex.codecogs.com/svg.image?K "K")
@@ -249,25 +302,11 @@ Using the predictive distribution, we can plot the Gaussian process by
 choosing the data we want to predict to be a large sample of points of
 the domain:
 
-``` r
-plotgp_1D <- function(xvals, x.train, y.train, sigma = 1, l = 1, xlimit = c(), ylimit = c()){
-  posterior <- posterior(xvals, x.train, y.train, sigma = sigma, l = l)
-  mu <- posterior[[1]]; cov <- posterior[[2]]
-  uncertainty <- 1.96 * sqrt(diag(cov))
-  plot(as.vector(t(x.train)), as.vector(t(y.train)), col = 4, pch = 19,
-       xlim = xlimit, ylim = ylimit, xlab = "x", ylab = "y(x)")
-  xvals <- as.vector(t(xvals))
-  lines(xvals, mu)
-  lines(xvals, mu + uncertainty, col = "red")
-  lines(xvals, mu - uncertainty, col = "red")
-}
+<center>
 
-xvals <- data.frame(xvals = seq(-2 * pi, 2 * pi, by = 0.1))
-plotgp_1D(xvals, x.train, y.train, ylimit = c(-2, 2))
-curve(sin(x), add = T)
-```
+<img src="fig7.jpeg" style="width:40.0%" />
 
-<img src="man/figures/README-unnamed-chunk-11-1.png" width="50%" style="display: block; margin: auto;" />
+</center>
 
 ## 2-Dimensional Example
 
@@ -294,7 +333,11 @@ we will plot a coloured gradient for the correlations. We will be using
 the same SE function to calculate the covariance coefficients. Plotting
 the covariance gradient:
 
-<img src="man/figures/README-unnamed-chunk-13-1.png" width="50%" style="display: block; margin: auto;" />
+<center>
+
+<img src="fig8.jpeg" style="width:40.0%" />
+
+</center>
 
 Using the same matrix multiplication as for the one-dimensional case, we
 can calculate the predictive distribution for this Gaussian process.
@@ -320,7 +363,7 @@ plotgp_2D(x1, x2, x.train, y.train, sigma = 1, l = 2)
 
 <center>
 
-<img src="../../../../AppData/Local/Temp/RtmpsH8EPo/fileada04f9023fd.png" width="50%" style="display: block; margin: auto;" />
+<img src="fig9.png" style="width:40.0%" />
 
 </center>
 
@@ -334,16 +377,22 @@ Gaussian Process regression.
 The borehole function models water flowing through a borehole. The
 equation has the form:
 
+<center>
+
 ![
 f(x)=\\frac{2\\pi T_u(H_u-H_l)}{ln\\left(\\frac{r}{r_w}\\right)\\left(1+\\frac{2LT-u}{ln\\left(\\frac{r}{r_w}\\right)r_w^2K_w} + \\frac{T_u}{T_l} \\right)} .
 ](https://latex.codecogs.com/svg.image?%0Af%28x%29%3D%5Cfrac%7B2%5Cpi%20T_u%28H_u-H_l%29%7D%7Bln%5Cleft%28%5Cfrac%7Br%7D%7Br_w%7D%5Cright%29%5Cleft%281%2B%5Cfrac%7B2LT-u%7D%7Bln%5Cleft%28%5Cfrac%7Br%7D%7Br_w%7D%5Cright%29r_w%5E2K_w%7D%20%2B%20%5Cfrac%7BT_u%7D%7BT_l%7D%20%5Cright%29%7D%20.%0A "
 f(x)=\frac{2\pi T_u(H_u-H_l)}{ln\left(\frac{r}{r_w}\right)\left(1+\frac{2LT-u}{ln\left(\frac{r}{r_w}\right)r_w^2K_w} + \frac{T_u}{T_l} \right)} .
 ")
 
+</center>
+
 ### OTL Circuit Function (6-dimensional)
 
 The OTL Circuit function models an output transformerless push-pull
 circuit. The equation has the form:
+
+<center>
 
 ![
 V_m(x)=\\frac{(V\_{b1} + 0.74)\\beta (R\_{x2}+9)}{\\beta(R\_{c2}+9)+R_f} + \\frac{11.35R_f}{\\beta (R\_{c2}+9)+R_f} + \\frac{0.74R_f\\beta(R\_{c2}+9)}{(\\beta(R\_{c2}+9)+R_f)R\_{c1}}, \\\\ \\text{ where }
@@ -353,10 +402,14 @@ V_m(x)=\frac{(V_{b1} + 0.74)\beta (R_{x2}+9)}{\beta(R_{c2}+9)+R_f} + \frac{11.35
 V_{b1}=\frac{12R_{b2}}{R_{b1}+R_{b2}}.
 ")
 
+</center>
+
 ### Piston Simulation Function (7-dimensional)
 
 The piston simulation function models the circular motion of a piston
 within a cylinder. The equation has the form:
+
+<center>
 
 ![
 C(x) = 2 \\pi \\sqrt{\\frac{M}{k+S^2\\frac{P_0V_0}{T_0}\\frac{T_a}{V^2}}},\\\\ \\text{ where }
@@ -368,10 +421,14 @@ V = \frac{S}{2k}\left( \sqrt{A^2 + 4k \frac{P_0V_9}{T_0}T_a} - A  \right), \\
 A=P_0S + 19.62M - \frac{kV_0}{S}.
 ")
 
+</center>
+
 ### Robot Arm Function (8-dimensional)
 
 The robot arm function models the position of a 4 segment robotic arm.
 The equation has the form:
+
+<center>
 
 ![ 
 f(x) = (u^2 + v^2)^{0.5}, \\\\ \\text{ where } 
@@ -382,6 +439,8 @@ f(x) = (u^2 + v^2)^{0.5}, \\ \text{ where }
 u= \sum^4_{i=1}L_i\cos\left(\sum^i_{j=1} \theta_j\right), \\
 v= \sum^4_{i=1}L_i\sin\left(\sum^i_{j=1} \theta_j\right).
 ")
+
+</center>
 
 ## AvGPR
 
@@ -394,11 +453,15 @@ advantageous method of regression as it gains the benefits associated
 with model averaging. The measure of fit statistic that is used in this
 package is:
 
+<center>
+
 ![
 \\sum^n\_{i=1}\[(\\sigma_i - \\epsilon_i) ^ 2 + \\epsilon_i^2\],
 ](https://latex.codecogs.com/svg.image?%0A%5Csum%5En_%7Bi%3D1%7D%5B%28%5Csigma_i%20-%20%5Cepsilon_i%29%20%5E%202%20%2B%20%5Cepsilon_i%5E2%5D%2C%0A "
 \sum^n_{i=1}[(\sigma_i - \epsilon_i) ^ 2 + \epsilon_i^2],
 ")
+
+</center>
 
 where ![i](https://latex.codecogs.com/svg.image?i "i") denotes the
 predicted point,
@@ -411,7 +474,11 @@ normalised RSS.
 
 Here is an example plot from an AvGPR regression:
 
-<img src="man/figures/README-unnamed-chunk-16-1.png" width="50%" style="display: block; margin: auto;" />
+<center>
+
+<img src="fig10.jpeg" style="width:40.0%" />
+
+</center>
 
 <https://github.com/benjmuller/AvGPR>
 
