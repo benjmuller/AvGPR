@@ -70,7 +70,7 @@ called Gaussian Process regression or Kriging. Using this method, we can
 write multi-output prediction problems in the following parametric form:
 
 ![\\hat{y}(x)=m(x)+Z(x),](https://latex.codecogs.com/svg.image?%5Chat%7By%7D%28x%29%3Dm%28x%29%2BZ%28x%29%2C "\hat{y}(x)=m(x)+Z(x),")
-
+  
 where
 ![\\hat{y}](https://latex.codecogs.com/svg.image?%5Chat%7By%7D "\hat{y}")
 is the simulated output,
@@ -90,10 +90,12 @@ parametric from the non-parametric form, is by considering a bivariate
 normal:
 
 <figure>
-<img src="tools/fig1.jpeg" style="width:30.0%"
-alt="A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1." />
-<figcaption aria-hidden="true">A contour plot of a bivariate normal with
-marginal means 0, marginal variances 2 and covariances 1.</figcaption>
+  <p align="center">
+  <img src="tools/fig1.jpeg" style="width:30.0%" 
+  alt="A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1." />
+  <figcaption aria-hidden="true">A contour plot of a bivariate normal with
+    marginal means 0, marginal variances 2 and covariances 1.</figcaption>
+  </p>
 </figure>
 
 <br> The normal distributions that construct the bivariate normal have
@@ -105,7 +107,9 @@ plotting some random samples of possible values for the conditional
 distribution
 ![Y_1\|Y_0=0](https://latex.codecogs.com/svg.image?Y_1%7CY_0%3D0 "Y_1|Y_0=0"):
 
-![](tools/fig2.jpeg)
+<p align="center">
+<img src="tools/fig2.jpeg" style="width:30.0%"/>
+</p>
 
 <br>
 
@@ -116,7 +120,9 @@ with
 with correlations that are specified by the squared exponential
 covariance function (SE):
 
-![](tools/fig3.jpeg)
+<p align="center">
+<img src="tools/fig3.jpeg" style="width:30.0%"/>
+</p>
 
 <br>
 
@@ -126,8 +132,14 @@ Now suppose we condition the observations
 ![Y_9=-0.4](https://latex.codecogs.com/svg.image?Y_9%3D-0.4 "Y_9=-0.4")
 and plot samples of possible values:
 
-![LHS: Random samples. RHS: Random samples overlaid onto one set of
-axes.](tools/fig4.jpeg)
+<figure>
+  <p align="center">
+  <img src="tools/fig4.jpeg" style="width:30.0%" 
+  alt="LHS: Random samples. RHS: Random samples overlaid onto one set of axes." />
+  <figcaption aria-hidden="true">LHS: Random samples. RHS: Random samples overlaid 
+    onto one set of axes. </figcaption>
+  </p>
+</figure>
 
 <br>
 
@@ -140,7 +152,9 @@ function to be parametric functions that define the covariance in the
 discrete multivariate case. This gives us the construction of the
 Gaussian Process regression.
 
-<img src="tools/fig5.jpeg" style="width:30.0%" />
+<p align="center">
+<img src="tools/fig5.jpeg" style="width:30.0%"/>
+</p>
 
 ## 1-Dimensional Example
 
@@ -211,7 +225,9 @@ the correlations between each of the random variables. This is
 beneficial when the matrix is large, as there are too many values to
 reliably interpolate the behaviors.
 
-![](tools/fig6.jpeg)
+<p align="center">
+<img src="tools/fig6.jpeg" style="width:30.0%"/>
+</p>
 
 Using the covariance function to construct covariance matrices from
 combinations of the observed data and data we want to predict, we can
@@ -258,7 +274,9 @@ Using the predictive distribution, we can plot the Gaussian process by
 choosing the data we want to predict to be a large sample of points of
 the domain:
 
-![](tools/fig7.jpeg)
+<p align="center">
+<img src="tools/fig7.jpeg" style="width:30.0%"/>
+</p>
 
 ## 2-Dimensional Example
 
@@ -285,7 +303,9 @@ we will plot a coloured gradient for the correlations. We will be using
 the same SE function to calculate the covariance coefficients. Plotting
 the covariance gradient:
 
-![](tools/fig8.jpeg)
+<p align="center">
+<img src="tools/fig8.jpeg" style="width:30.0%"/>
+</p>
 
 Using the same matrix multiplication as for the one-dimensional case, we
 can calculate the predictive distribution for this Gaussian process.
@@ -308,8 +328,9 @@ x1 <- seq(from = -5, to = 10, by = 0.2)
 x2 <- seq(from = 0, to = 15, by = 0.2)
 plotgp_2D(x1, x2, x.train, y.train, sigma = 1, l = 2)
 ```
-
-![](tools/fig9.png)
+<p align="center">
+<img src="tools/fig9.png" style="width:30.0%"/>
+</p>
 
 ## Higher dimensional Examples
 
@@ -398,8 +419,12 @@ normalised RSS.
 
 Here is an example plot from an AvGPR regression:
 
-![](tools/fig10.jpeg)
+<p align="center">
+<img src="tools/fig10.jpeg" style="width:30.0%"/>
+</p>
 
 <https://github.com/benjmuller/AvGPR>
 
-<img src="tools/SheffieldLogo.jpg" style="width:10.0%" />
+<p align="left">
+<img src="tools/SheffieldLogo.jpg" width="200"/>
+</p>
