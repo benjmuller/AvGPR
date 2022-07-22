@@ -91,7 +91,7 @@ normal:
 
 <figure>
   <p align="center">
-  <img src="tools/fig1.jpeg" style="width:30.0%" 
+  <img src="tools/fig1.jpeg" width=300 
   alt="A contour plot of a bivariate normal with marginal means 0, marginal variances 2 and covariances 1." />
   <figcaption aria-hidden="true">A contour plot of a bivariate normal with
     marginal means 0, marginal variances 2 and covariances 1.</figcaption>
@@ -108,7 +108,7 @@ distribution
 ![Y_1\|Y_0=0](https://latex.codecogs.com/svg.image?Y_1%7CY_0%3D0 "Y_1|Y_0=0"):
 
 <p align="center">
-<img src="tools/fig2.jpeg" style="width:30.0%"/>
+<img src="tools/fig2.jpeg" width=400/>
 </p>
 
 <br>
@@ -121,7 +121,7 @@ with correlations that are specified by the squared exponential
 covariance function (SE):
 
 <p align="center">
-<img src="tools/fig3.jpeg" style="width:30.0%"/>
+<img src="tools/fig3.jpeg" width=350 height=300/>
 </p>
 
 <br>
@@ -134,7 +134,7 @@ and plot samples of possible values:
 
 <figure>
   <p align="center">
-  <img src="tools/fig4.jpeg" style="width:30.0%" 
+  <img src="tools/fig4.jpeg" width=400 
   alt="LHS: Random samples. RHS: Random samples overlaid onto one set of axes." />
   <figcaption aria-hidden="true">LHS: Random samples. RHS: Random samples overlaid 
     onto one set of axes. </figcaption>
@@ -153,7 +153,7 @@ discrete multivariate case. This gives us the construction of the
 Gaussian Process regression.
 
 <p align="center">
-<img src="tools/fig5.jpeg" style="width:30.0%"/>
+<img src="tools/fig5.jpeg" width=300/>
 </p>
 
 ## 1-Dimensional Example
@@ -226,7 +226,7 @@ beneficial when the matrix is large, as there are too many values to
 reliably interpolate the behaviors.
 
 <p align="center">
-<img src="tools/fig6.jpeg" style="width:30.0%"/>
+<img src="tools/fig6.jpeg" width=300/>
 </p>
 
 Using the covariance function to construct covariance matrices from
@@ -275,7 +275,7 @@ choosing the data we want to predict to be a large sample of points of
 the domain:
 
 <p align="center">
-<img src="tools/fig7.jpeg" style="width:30.0%"/>
+<img src="tools/fig7.jpeg" width=300/>
 </p>
 
 ## 2-Dimensional Example
@@ -304,7 +304,7 @@ the same SE function to calculate the covariance coefficients. Plotting
 the covariance gradient:
 
 <p align="center">
-<img src="tools/fig8.jpeg" style="width:30.0%"/>
+<img src="tools/fig8.jpeg" width=300/>
 </p>
 
 Using the same matrix multiplication as for the one-dimensional case, we
@@ -329,7 +329,7 @@ x2 <- seq(from = 0, to = 15, by = 0.2)
 plotgp_2D(x1, x2, x.train, y.train, sigma = 1, l = 2)
 ```
 <p align="center">
-<img src="tools/fig9.png" style="width:30.0%"/>
+<img src="tools/fig9.png" width=300/>
 </p>
 
 ## Higher dimensional Examples
@@ -420,11 +420,11 @@ normalised RSS.
 Here is an example plot from an AvGPR regression:
 
 <p align="center">
-<img src="tools/fig10.jpeg" style="width:30.0%"/>
+<img src="tools/fig10.jpeg" width=300/>
 </p>
 
 <https://github.com/benjmuller/AvGPR>
 
 <p align="left">
-<img src="tools/SheffieldLogo.jpg" width="200"/>
+<img src="tools/SheffieldLogo.jpg" width=200/>
 </p>
